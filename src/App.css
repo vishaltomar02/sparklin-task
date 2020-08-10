@@ -382,7 +382,7 @@ body {
 .cards-button-container .add-to-cart-button,
 .cards-button-container .buy-now-button {
   height: 30px;
-  width: 125px;
+  width: 45%;
   padding: auto;
   font-size: 12px;
   outline: none;
