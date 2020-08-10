@@ -30,7 +30,7 @@ body {
   flex-direction: row;
 }
 
-.header .logo-container > div {
+.header .logo-container >div{
   color: #6a6a6a;
   font-size: 14px;
   font-weight: medium;
@@ -201,7 +201,9 @@ body {
   padding: 0.85em 1.2em;
 }
 
-.sidebar-container .sidebar-toggler .toggler-icon {
+.sidebar-container .sidebar-toggler .toggler-icon,
+.carousel-left-arrow .toggler-icon,
+.carousel-right-arrow .toggler-icon{
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -298,9 +300,10 @@ body {
 }
 
 /* Middle COmponent Css starts here*/
-/* .middle-container {
-  width: 7px;
-} */
+
+.middle-container {
+  padding: 50px 0 0 0;
+}
 
 .middle-container .section-cards {
   padding: 0 40px 0 35px;
@@ -454,11 +457,13 @@ body {
 
 .right-info-container {
   height: 100%;
+  padding: 50px 0 0 0;
   grid-column: 3/4;
 }
 
 .right-info-container .features-container {
   padding: 32px 59px;
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
   display: grid;
   height: 313px;
   width: 100%;
@@ -538,3 +543,209 @@ body {
   margin-bottom: 20px;
 }
 
+/*Footer Component Css Starts Here*/
+
+.footer-container {
+  width: 100%;
+  background: #F2F2F2;
+  display: flex;
+  flex-direction: row;
+  height: 517px;
+  padding: 85px 100px 50px 100px;
+}
+
+.footer-container >div:nth-child(1) {
+  width: 225px;
+}
+.footer-container >div:nth-child(2) {
+  width: 150px;
+  margin-left: 130px;
+}
+.footer-container >div:nth-child(3) {
+  width: 150px;
+  margin-left: 70px;
+}
+.footer-container >div:nth-child(4) {
+  width: 195px;
+  margin-left: 70px;
+}
+.footer-container >div:nth-child(5) {
+  width: 150px;
+  margin-left: 25px;
+}
+
+.social-connect-container {
+  display: flex;
+  grid-column: 1/2;
+  flex-direction: column;
+  font-weight: bold;
+  color: black;
+}
+
+.social-connect-container >img{
+  margin-bottom: 26px;
+}
+
+.social-connect-container p {
+  font-size: 12px;
+  color: #4A4A4A;
+  line-height: 25px;
+  letter-spacing: 0.3px;
+  margin-bottom: 30px;
+}
+
+.social-connect-container .stores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.social-connect-container .stores >img {
+  width: 101px;
+  height: 30px;
+}
+
+.social-connect-container .social-icons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 28px;
+}
+
+.social-connect-container .social-icons >svg {
+  height: 20px;
+  width: 20px;
+  margin-right: 17px;
+}
+
+.footer-container .footer-category {
+  margin-bottom: 35px;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.footer-container .footer-category >h3 {
+  color: var(--font-color-main);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-container .footer-category >p {
+  line-height: 25px;
+  letter-spacing: 0.3px;
+}
+
+.footer-container .footer-category >p >a {
+  text-decoration: none;
+  color: #4A4A4A;
+  cursor: pointer;
+}
+
+.footer-container .footer-category >p >a:hover {
+  color: var(--theme-color);
+}
+
+/* Carousel css starts here*/
+
+.carousel-box {
+  height: 395px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-box .card-toggler {
+  height: 30px;
+  width: 113px;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  background: white;
+  transform: translateY(-100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 14px;
+  color: var(--font-color-main);
+}
+
+.carousel-box .card-toggler .cross{
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
+
+
+.carousel-box .card-toggler .cross:after, .carousel-box .card-toggler .cross:before {
+  top: 50%;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  background: var(--font-color-alternative);
+}
+
+.carousel-box .card-toggler .cross:after {
+  transform: rotate(45deg);
+}
+ 
+.carousel-box .card-toggler .cross:before {
+  transform: rotate(-45deg);
+}
+
+.carousel-container {
+  height: 300px;
+  width: 725px;
+  overflow: hidden;
+}
+
+.carousel-container .carousel-content {
+  height: 100%;
+  display: flex;
+}
+
+.slides-container
+{
+  height: 100%;
+  width: 100%;
+}
+
+.slides {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.carousel-left-arrow, .carousel-right-arrow {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.carousel-left-arrow:hover .toggler-icon, .carousel-right-arrow:hover .toggler-icon{
+  transform: scale(1.05);
+  transform-origin: inherit;
+}
+
+.carousel-left-arrow {
+  left: 10%;
+  transform: translate(-100%, -50%);
+}
+
+.carousel-right-arrow {
+  right: 10%;
+  transform: translate(100%, -50%);
+}
