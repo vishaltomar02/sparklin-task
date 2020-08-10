@@ -173,7 +173,7 @@ body {
 
 .main-content-container {
   display: grid;
-  grid-template-columns: 225px 950px 1fr;
+  grid-template-columns: 14% 63% 23%;
 }
 
 /*SideBar css starts here*/
@@ -308,7 +308,7 @@ body {
 .middle-container .section-cards {
   padding: 0 40px 0 35px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 45px;
 }
 
@@ -465,7 +465,7 @@ body {
   padding: 32px 59px;
   border-left: 1px solid rgba(0, 0, 0, 0.05);
   display: grid;
-  height: 313px;
+  height: auto;
   width: 100%;
   background: white;
   grid-template-rows: repeat(3,1fr);
@@ -495,6 +495,7 @@ body {
 
 .features-container .feature >h3 {
   grid-column: 2/5;
+  margin-top: 10px;
   grid-row: 2/3;
   font-size: 15px;
   font-weight: bold;
@@ -701,7 +702,7 @@ body {
 
 .carousel-container {
   height: 300px;
-  width: 725px;
+  width: 80%;
   overflow: hidden;
 }
 
@@ -741,11 +742,11 @@ body {
 }
 
 .carousel-left-arrow {
-  left: 10%;
+  left: 8%;
   transform: translate(-100%, -50%);
 }
 
 .carousel-right-arrow {
-  right: 10%;
+  right: 8%;
   transform: translate(100%, -50%);
 }
