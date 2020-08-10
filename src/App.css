@@ -517,11 +517,33 @@ body {
   background: white;
   border-radius: 5px;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .offers-container .offer-card .image-container {
   width: 100%;
   height: 168px;
+  position: relative;
+}
+
+.offers-container .offer-card .image-container:after {
+  height: 100%;
+  content: '';
+  width: 100%;
+  position: absolute;
+  transform: translateY(-100%);
+  top: 0;
+  left: 0;
+  background: rgba(248, 136, 34, 0.2);
+  transition: all 0.3s ease;
+}
+
+.offers-container .offer-card:hover {
+  transform: translateY(-10px);
+}
+
+.offers-container .offer-card:hover .image-container:after {
+  transform: translateX(0);
 }
 
 .offers-container .offer-card .image-container >img {
